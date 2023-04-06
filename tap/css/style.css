@@ -1,0 +1,47 @@
+* { margin: 0; padding: 0; border: none; }
+body { padding-top: 1rem; background: #eee; color: #111; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5em; }
+	.Hidden { display: none; } 
+	.Framework { width: 90%; margin: 0 auto; padding: 2rem 2% 1rem; background: #fff; box-shadow: 0 1rem 1rem rgba(0,0,0,0.1); }
+	@media (min-width: 800px) { .Framework { width: 80%; padding: 3rem 5% 1rem; } }
+	@media (min-width: 1700px) { .Framework { width: 61.8%; padding: 3rem 3% 1rem; } }
+		h1 { display: block; margin: 0 0 1rem 0; font-size: 3rem; line-height: 1em; font-weight: bold; }
+		h2 { display: block; margin: 1rem 0; font-size: 2rem; line-height: 1em; font-weight: normal; }
+		p { display: block; margin: 1rem 0; }
+		.Form {  }
+			fieldset { padding: 1rem; margin: 1rem 0; border: 1px solid #eee; }
+				legend { color: #aaa; font-size: 0.75rem; line-height: 1em; }
+				.Label { display: block; }
+				.Error { color: red; }
+					.LabelText { display: inline-block; line-height: 1.5rem; }
+					.LabelInput { display: inline-block; width: auto; height: 1.5rem; padding: 0; background: #eee; color: #000; border: 1px solid #ddd; font-size: 1rem; line-height: 1.5rem; text-align: center; box-sizing: border-box; }
+						input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; margin: 0; }
+				.MatriceContainer { list-style-type: none; list-style-position: outside; }
+					.MatriceLinie { display: block; clear: both; }
+						.MatriceLinie .Label { display: inline-block; }
+							.Pret { width: 2rem; height: 2rem; padding: 0; margin: 0 0.25rem 0.25rem 0; line-height: 2rem; }
+							.Readonly { background: #fff; color: #666; border: 1px solid #f8f8f8; }
+							.Pulse { animation: pulsate 1s ease-out; animation-iteration-count: 3; }
+								@keyframes pulsate {
+									0% { background: #eee; }
+									50% { background: #ff0; }
+									100% { background: #eee; }
+								}
+				.Button { display: inline-block; padding: 0 1rem; background: #00b74f; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 1.5rem; line-height: 2em; border-radius: 0.25rem; box-shadow: 0.25rem 0.25rem 0 rgba(0,0,0,0.1); cursor: pointer; text-decoration: none; }
+					.Refresh {  }
+					.Back { background: #999; }
+				.Button:hover { background: #e4002b; box-shadow: 0.125rem 0.125rem 0 rgba(0,0,0,0.2); }
+				.Button:active { background: #777; color: #fff; box-shadow: 0.25rem 0.25rem 0 rgba(0,0,0,0.2) inset; }
+
+				.QSLabel { float: left; margin: 1rem 1rem 1rem 0; }
+					.QSLabel .LabelInput { width: 3rem; height: 3rem; }
+				.QSAdauga { display: block; clear: left; font-size: 1rem; text-align: center; }
+				
+				.Rezultat { display: block; margin: 1rem 0; color: #00b74f; font-size: 2rem; line-height: 1em; font-weight: bold; }
+					.Rezultat pre { display: block; float: left; padding: 1rem 0; line-height: 17px; overflow-x: auto; }
+				
+				.Concluzie { clear: both; font-size: 1.5rem; line-height: 2.5em; }
+				
+				.Copy { padding: 0 0 1px 0; }
+				
+		.Proiecte {  }
+			.Proiect { margin: 1rem 0; }

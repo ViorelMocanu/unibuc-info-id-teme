@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular JS Chat</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,500' rel='stylesheet' type='text/css'>
+<script src="https://use.fontawesome.com/21be5f2318.js"></script>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+<link rel='stylesheet prefetch' href='http://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container" ng-app="angularChat" ng-controller="angularChatController">
+  <div class="chat">
+    <div class="chat__header">
+      <h2>Angular JS Chat <span ng-show="loggedIn">Welcome, {{username}}</span></h2>
+    </div>
+    <div class="chat__sidebar" ng-class="{'expanded': !chat.id}">
+      <ul class="chat-sidebar__users">
+        <li class="chat-sitebar-users__user" ng-repeat="user in users" ng-click="changeRoom(user.id, user.username)">
+          <img src="{{user.avatar}}" alt="{{user.username}}"><i class="fa fa-circle" aria-hidden="true" ng-class="{'online': user.status == 'online', 'offline': user.status == 'offline', 'idle': user.status == 'idle'}"></i><h2>{{user.username}}</h2>
+        </li>
+      </ul>
+    </div>
+    <div class="chat__content" ng-show="chat.id">
+      <div class="chat-content__messages">
+        <ul class="mCustomScrollbar" data-mcs-theme="dark-thin">
+          <li ng-repeat="message in messages[chat.id]" ng-class="{'left': message.username != username}">
+            <img src="{{users['0'].avatar}}" alt="{{user.username}}">
+            <span>{{message.message}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="chat-content__form">
+        <form ng-submit="sendMessage();">
+          <input type="text" class="chat-content-form__input" placeholder="Type something" ng-model="message">
+          <div class="chat-content-form__submit"><i class="fa fa-check" aria-hidden="true" ng-click="sendMessage();"></i></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" ng-hide="loggedIn">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2>Welcome to Angular JS Chat</h2>
+      </div>
+      <div class="modal__form">
+        <form ng-submit="enterChat($event);">
+          <input type="text" placeholder="Type desired username" ng-model="username">
+        </form>
+      </div>
+      <div class="modal__footer">
+        <a href="#" ng-class="{'disabled': !username}" ng-click="enterChat($event);"><i class="fa fa-check" aria-hidden="true"></i>Enter Chat</a>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='http://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

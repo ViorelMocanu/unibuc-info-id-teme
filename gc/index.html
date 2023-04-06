@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro-RO" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Application-Name" content="Proiect GC" />
+		<meta name="apple-mobile-web-app-title" content="Proiect GC">
+		<meta name="Author" content="http://viorel.tel" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="Robots" content="index, follow" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<title>Geometrie Computațională - Diagrama Voronoi dinamică</title>
+		<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script><!-- librărie framework, foarte populară, multifuncțională -->
+		<script type="text/javascript" src="./js/rhill-voronoi-core.min.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script><!-- scriptul făcut de mine -->
+	</head>
+	<body itemscope="itemscope" itemtype="http://schema.org/WebPage" dir="ltr">
+		<div class="Framework">
+			<h1>Geometrie Computațională</h1>
+			<p>Acest proiect a fost dezvoltat cu scopul prezentării la final de semestru pentru materia Geometrie Computațională, Anul 2, Facultatea de Informatică, Universitatea din București. Proiectul prezintă o diagramă Voronoi dinamică, în care punctele sunt adăugate în mod aleatoriu sau deliberat într-un spațiu de lucru finit.</p>
+			<nav class="Meniu"> <!-- tab-urile care servesc drept meniu principal -->
+				<ul class="MeniuLista">
+					<li class="MeniuItem Active">
+						<a class="Button" href="#regenereaza" title="Crează o nouă diagramă Voronoi cu numărul de puncte decis de valoarea din input">Re-generează</a>
+					</li>
+					<li class="MeniuItem">
+						<form class="Form" id="vorForm" action="#" method="post">
+							<fieldset class="Fieldset">
+								<legend class="Hidden">Introdu câte noduri să adaug în diagrama Voronoi:</legend>
+								<input class="Input" name="voronoiNumberSites" id="voronoiNumberSites" type="number" value="10" size="5" maxlength="5" min="0" max="999" step="1" placeholder="Noduri" accesskey="n" autofocus="autofocus" />
+							</fieldset>
+						</form>
+						<a class="Button" href="#adauga" title="Adaugă la diagrama Voronoi existentă numărul selectat de noduri">Adaugă noduri</a>
+					</li>
+					<li class="MeniuItem Curata">
+						<a class="Button" href="#curata" title="Curăță diagrama Voronoi de toate punctele">Curăță</a>
+					</li>
+				</ul>
+			</nav>
+			<main class="Continut">
+				<h2>Diagrama Voronoi</h2>
+				<p>Click oriunde pentru a crea un punct în diagrama Voronoi!</p>
+				<div class="CanvasContainer">
+					<noscript>You need to enable Javascript in your browser for this page to display properly.</noscript>
+					<canvas class="Canvas" id="voronoiCanvas" style="cursor:crosshair" width="800" height="600"></canvas>
+					<div class="Hidden">
+						<p>Your browser doesn't support the HTML5 &lt;canvas&gt; element technology.</p>
+						<p>See <a target="_blank" href="http://en.wikipedia.org/wiki/Canvas_(HTML_element)">Wikipedia</a> for information on which browsers support the <strong>HTML5 &lt;canvas&gt;</strong> technology.</p>
+					</div>
+				</div>
+			</main>
+			<p class="Copy">Autor: <a href="http://viorel.tel" tabindex="0">Viorel Mocanu</a>.</p>
+		</div>
+		<script type="text/javascript">
+			var protocol = '';
+			var p = window.location.href.split('/');
+			if ( p[0] != 'http:' && p[0] != 'https:' ) protocol = 'http:';
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script',protocol+'//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-266669-11', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>

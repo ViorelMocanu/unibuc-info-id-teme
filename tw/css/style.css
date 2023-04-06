@@ -1,0 +1,85 @@
+/* font-uri custom */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:300,300italic,900,900italic");
+
+/* reset + clearfix */
+* { margin: 0; padding: 0; border: none; }
+.Clearfix, .MeniuLista, .Fieldset, .SpanzuLista, .Proiect, .SpanzuLitere { *zoom: 1; }
+.Clearfix:after, .MeniuLista:after, .Fieldset:after, .SpanzuLista:after, .Proiect:after, .SpanzuLitere:after { clear: both; display: block; visibility: hidden; overflow: hidden; height: 0 !important; line-height: 0; font-size: xx-large; content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x "; }
+
+/* stiluri structurale */
+body { padding-top: 1rem; background: #eee; color: #111; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5em; }
+	.Framework { width: 90%; margin: 0 auto; padding: 2rem 2% 1rem; background: #fff; box-shadow: 0 1rem 1rem rgba(0,0,0,0.1); }
+	@media (min-width: 800px) { .Framework { width: 80%; padding: 3rem 5% 1rem; } }
+	@media (min-width: 1700px) { .Framework { width: 61.8%; padding: 3rem 3% 1rem; } }
+		h1 { display: block; margin: 0 0 1rem 0; font-size: 3rem; line-height: 1em; font-weight: 900; font-family: 'Merriweather', Georgia, Times, serif; }
+		@media (min-width: 800px) { h1 { font-size: 4rem; } }
+		h2 { display: block; margin: 2rem 0 1rem 0; color: #00b74f; font-size: 3rem; line-height: 1.2em; font-weight: 900; font-style: italic; font-family: 'Merriweather', Georgia, Times, serif; }
+		h3 { display: block; margin: 0 0 1rem 0; }
+			.ProgresContainer { display: block; clear: both; width: auto; height: 2rem; background: #f8f8f8; border: 1px solid #eee; border-radius: 0.5rem; box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.1) inset; }
+			.ProgresContainer.Final { background: #f00; }
+				.Progres { display: block; width: 3.84%; height: 2rem; background: rgba(0,0,0,0.3); color: #000; text-align: center; line-height: 2rem; transition: all 1s; }
+				.Final .Progres { background: #00b74f; color: #fff; }
+		p { display: block; margin: 1rem 0; }
+		.Form {  }
+			.Fieldset { display: none; padding: 1rem; margin: 1rem -1rem; border: 1px solid #eee; }
+			.Fieldset.Active { display: block; }
+			#spanzuratoarea .Fieldset { display: block !important; }
+				.Legend { color: #aaa; font-size: 2rem; line-height: 1em; font-weight: bold; }
+				.IntrebarePoza { display: block; float: none; margin: 0 0 1rem 0; max-width: 100%; width: auto; height: auto; }
+				@media (min-width: 1024px) { .IntrebarePoza { float: right; margin: -2rem -1rem -1rem 1rem; max-width: 50%; width: auto; height: auto; } }
+				.Intrebare { margin: 0 0 0.5rem 0; font-size: 1rem; line-height: 1.5em; font-weight: bold; }
+				.Label { display: block; float: none; clear: none; overflow: hidden; padding: 0.5rem; margin: 0 0 0.5rem 0; position: relative; border: 1px solid #999; background: #fff; color: #333; border-radius: 1rem; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+				.Label:hover { background: #f4f4f4; color: #222; }
+					.Label.Checked { background: #999; color: #000; }
+					.Checked:before, .Label.Corect:before, .Label.Ratat:before, .Label.Gresit:before { display: block; content: '\2713'; width: 1rem; height: 1em; padding: 0.5rem; position: absolute; right: 0; top: 0; background: #fff; border: 1px solid #eee; font-size: 1.5rem; font-weight: 900; border-radius: 1rem; }
+					.Label.Corect:before { color: #00b74f; }
+					.Label.Ratat:before { content: '\002b'; color: #f90; }
+					.Label.Gresit:before { content: '\00d7'; color: #f00; }
+					.Label.Gresit { background: #f00; color: #fff; }
+					.Label.Ratat { background: #f90; color: #fff; }
+					.Label.Corect { background: #00b74f; color: #fff; }
+					.Label.Bun { background: #00b74f; color: #fff; }
+						.LabelText { display: block; }
+							.LabelText strong { float: left; width: 1.5rem; margin: 0 0 1px 0; }
+				.Error { color: red; }
+				.Button { display: inline-block; padding: 0 1rem; background: #00b74f; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 1.5rem; line-height: 2em; border-radius: 0.25rem; box-shadow: 0.25rem 0.25rem 0 rgba(0,0,0,0.1); cursor: pointer; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+					.Fieldset .Button { display: block; clear: left; }
+					.Back { display: block; float: right; background: #999; }
+				.Button:hover { background: #e4002b; box-shadow: 0.125rem 0.125rem 0 rgba(0,0,0,0.2); }
+				.Button:active { background: #777; color: #fff; box-shadow: 0.25rem 0.25rem 0 rgba(0,0,0,0.2) inset; }
+
+		.Meniu { display: block; }
+			.MeniuLista { display: block; border-bottom: 2px solid #00b74f; list-style-type: none; list-style-position: outside; }
+				.MeniuItem { display: block; float: left; width: 33.3333%; }
+				@media (min-width: 800px) { .MeniuItem { width: 25%; } }
+				.MeniuItem .Button { display: block; padding: 1rem; background: transparent; color: #333; font-size: 1.5rem; line-height: 1em; text-transform: none; text-align: center; box-shadow: none; border-radius: 0.5rem 0.5rem 0 0 }
+					.MeniuItem .Button:hover { background: #fff; color: #00b74f; }
+					.MeniuItem.Active .Button, .MeniuItem .Button:active { background: #00b74f; color: #fff; }
+
+		.Continut { display: block; }
+			.Proiect { display: none; clear: both; }
+			.Proiect.Active { display: block; }
+
+			.SpanzuCanvas { display: block; float: right; width: 256px; height: 256px; margin: 1rem 0 0 0; background: #f8f8f8; color: #333; border: 1px solid #eee; box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.1) inset; }
+			.SpanzuLista { display: block; }
+				.SpanzuItem { display: block; float: left; margin: 0 0.5rem 0.5rem 0; position: relative; overflow: hidden; }
+					.SpanzuInput { display: block; width: 2.5rem; height: 2.5rem; background: #eee; color: #000; border: none; font-size: 2rem; line-height: 2.5rem; text-align: center; border-radius: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+						.graphic { position: absolute; bottom: -8px; left: 0; fill: none; }
+						.graphic--nao { stroke: #92989e; pointer-events: none; -webkit-transition: -webkit-transform 0.7s, stroke 0.7s; transition: transform 0.7s, stroke 0.7s; -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1); transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1); }
+						.filled + .input__label--nao { color: #333; -webkit-transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1); transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1); }
+						.filled ~ .graphic--nao { stroke: #00b74f; -webkit-transform: translate3d(-66.6%, 0, 0); transform: translate3d(-66.6%, 0, 0); }
+			.SpanzuLitere { display: block; margin: 1rem 0 0 0; }
+				.SpanzuLitera { display: block; float: left; margin: 0 0.5rem 0.5rem 0; padding: 0 0.5rem; background: #f00; color: #fff; }
+				.Buna { background: #00b74f; }
+
+			.Canvas { display: block; width: 100%; height: auto; background: transparent; border: 1px solid #eee; }
+
+		.Rezultat { display: block; margin: 1rem 0; color: #00b74f; font-size: 2rem; line-height: 1em; font-weight: bold; }
+			.Rezultat pre { display: block; float: left; padding: 1rem 0; line-height: 17px; overflow-x: auto; }
+
+		.Concluzie { clear: both; font-size: 1.5rem; line-height: 2.5em; }
+
+		.Copy { padding: 0 0 1px 0; }
+
+/* clase generice / unelte */
+.Hidden { display: none; }

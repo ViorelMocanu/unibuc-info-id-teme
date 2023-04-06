@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ro-RO" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Application-Name" content="Proiecte TAP" />
+		<meta name="apple-mobile-web-app-title" content="Proiecte TAP">
+		<meta name="Author" content="http://viorel.tel" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="Robots" content="index, follow" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<title>Proiecte Tehnici Web</title>
+		<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script><!-- librărie framework, foarte populară, multifuncțională -->
+		<script type="text/javascript" src="./js/easeljs-next.min.js"></script><!-- librărie de bază pentru animații -->
+		<script type="text/javascript" src="./js/tweenjs-next.min.js"></script><!-- librărie add-on de EaselJS pentru tweening -->
+		<script type="text/javascript" src="./js/script.js"></script><!-- scriptul făcut de mine -->
+	</head>
+	<body itemscope="itemscope" itemtype="http://schema.org/WebPage" dir="ltr">
+		<div class="Framework">
+			<h1>Proiecte &ndash; <strong>Tehnici Web</strong></h1>
+			<p>Aceste proiecte sunt dezvoltate cu scopul prezentării la final de semestru pentru materia Tehnici Web, Anul 2, Facultatea de Informatică, Universitatea din București. 2 din cele 3 proiecte sunt 100% compatibile cu dispozitive mobile moderne. Folosiți tab-urile de mai jos pentru a naviga între proiectele prezentate.</p>
+			<nav class="Meniu"> <!-- tab-urile care servesc drept meniu principal -->
+				<ul class="MeniuLista">
+					<li class="MeniuItem Active">
+						<a class="Button" href="#auto" title="Vizualizați testul auto">Teste auto</a>
+					</li>
+					<li class="MeniuItem">
+						<a class="Button" href="#spanzuratoarea" title="Vizualizați spânzurătoarea">Spânzurătoarea</a>
+					</li>
+					<li class="MeniuItem">
+						<a class="Button" href="#animatie" title="Vizualizați animația">Animație</a>
+					</li>
+				</ul>
+			</nav>
+			<main class="Continut">
+				<section class="Proiect Active" id="auto">
+					<h2 id="auto-titlu">Teste auto</h2>
+					<div class="ProgresContainer">
+						<div class="Progres">1/26</div> <!-- incrementez pe măsură ce se progresează prin întrebări, și schimb lățimea în consecință -->
+					</div>
+					<form class="Form" action="index.html" method="post" id="autoForm" name="autoForm">
+						<fieldset class="Fieldset Enunt Active" id="fieldset-1">
+							<legend class="Legend">Întrebarea nr. 1</legend>
+							<p class="Intrebare">Dacă după întreruperea contactului electric motorul continuă să funcționeze, fenomenul se numește:</p>
+							<label class="Label" for="intrebare-1-a">
+								<span class="LabelText"><strong>A.</strong> detonație;</span>
+								<input class="Checkbox Hidden" id="intrebare-1-a" name="intrebare-1" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-1-b">
+								<span class="LabelText"><strong>B.</strong> calare;</span>
+								<input class="Checkbox Hidden" id="intrebare-1-b" name="intrebare-1" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-1-c">
+								<span class="LabelText"><strong>C.</strong> autoaprindere;</span>
+								<input class="Checkbox Hidden" id="intrebare-1-c" name="intrebare-1" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-2">
+							<legend class="Legend">Întrebarea nr. 2</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-2.jpg" width="400" height="300" alt="Poza pentru întrebarea 2" />
+							<p class="Intrebare">În ce ordine vor circula autovehiculele prin intersecția prezentată, dacă semafoarele nu funcționează?</p>
+							<label class="Label" for="intrebare-2-a">
+								<span class="LabelText"><strong>A.</strong> tramvaiul 1, tramvaiul 2, autoturismul;</span>
+								<input class="Checkbox Hidden" id="intrebare-2-a" name="intrebare-2" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-2-b">
+								<span class="LabelText"><strong>B.</strong> autoturismul, tramvaiul 1, tramvaiul 2;</span>
+								<input class="Checkbox Hidden" id="intrebare-2-b" name="intrebare-2" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-2-c">
+								<span class="LabelText"><strong>C.</strong> tramvaiul 1, autoturismul, tramvaiul 2.</span>
+								<input class="Checkbox Hidden" id="intrebare-2-c" name="intrebare-2" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-3">
+							<legend class="Legend">Întrebarea nr. 3</legend>
+							<p class="Intrebare">Ce măsuri trebuie să luați atunci când circulați în condiții atmosferice ce împiedică mult vizibilitatea?</p>
+							<label class="Label" for="intrebare-3-a">
+								<span class="LabelText"><strong>A.</strong> sa folositi luminile de intalnire;</span>
+								<input class="Checkbox Hidden" id="intrebare-3-a" name="intrebare-3" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-3-b">
+								<span class="LabelText"><strong>B.</strong> sa circulati pe distante scurte si cu luminile de pozitie in functiune;</span>
+								<input class="Checkbox Hidden" id="intrebare-3-b" name="intrebare-3" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-3-c">
+								<span class="LabelText"><strong>C.</strong> sa folositi luminile de pozitie si sa circulati cat mai aproape de marginea din dreapta a drumului.</span>
+								<input class="Checkbox Hidden" id="intrebare-3-c" name="intrebare-3" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-4">
+							<legend class="Legend">Întrebarea nr. 4</legend>
+							<p class="Intrebare">Cand trebuie sa accelerati la efectuarea unui viraj?</p>
+							<label class="Label" for="intrebare-4-a">
+								<span class="LabelText"><strong>A.</strong> la inceperea manevrei;</span>
+								<input class="Checkbox Hidden" id="intrebare-4-a" name="intrebare-4" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-4-b">
+								<span class="LabelText"><strong>B.</strong> la mijlocul virajului sau cat mai aproape de iesirea din acesta;</span>
+								<input class="Checkbox Hidden" id="intrebare-4-b" name="intrebare-4" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-4-c">
+								<span class="LabelText"><strong>C.</strong> nu exista o recomandare in aceasta privinta.</span>
+								<input class="Checkbox Hidden" id="intrebare-4-c" name="intrebare-4" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-5">
+							<legend class="Legend">Întrebarea nr. 5</legend>
+							<p class="Intrebare">Cu ce viteza sunteti obligat sa circulati pe drumurile publice din afara localitatilor, cand partea carosabila este acoperita cu piatra cubica umeda?</p>
+							<label class="Label" for="intrebare-5-a">
+								<span class="LabelText"><strong>A.</strong> cu o viteza care sa nu depaseasca 50 km/h;</span>
+								<input class="Checkbox Hidden" id="intrebare-5-a" name="intrebare-5" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-5-b">
+								<span class="LabelText"><strong>B.</strong> cu o viteza care sa permita efectuarea oricarei manevre in conditii de siguranta;</span>
+								<input class="Checkbox Hidden" id="intrebare-5-b" name="intrebare-5" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-5-c">
+								<span class="LabelText"><strong>C.</strong> cu o viteza care sa nu depaseasca limita maxima de 90 km/h.</span>
+								<input class="Checkbox Hidden" id="intrebare-5-c" name="intrebare-5" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-6">
+							<legend class="Legend">Întrebarea nr. 6</legend>
+							<p class="Intrebare">Aveti permisiunea de a opri pe banda de urgenta?</p>
+							<label class="Label" for="intrebare-6-a">
+								<span class="LabelText"><strong>A.</strong> da, fara exceptie;</span>
+								<input class="Checkbox Hidden" id="intrebare-6-a" name="intrebare-6" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-6-b">
+								<span class="LabelText"><strong>B.</strong> da, daca o astfel de manevra este justificata;</span>
+								<input class="Checkbox Hidden" id="intrebare-6-b" name="intrebare-6" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-6-c">
+								<span class="LabelText"><strong>C.</strong> nu.</span>
+								<input class="Checkbox Hidden" id="intrebare-6-c" name="intrebare-6" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-7">
+							<legend class="Legend">Întrebarea nr. 7</legend>
+							<p class="Intrebare">Sanctiunile contraventionale sunt:</p>
+							<label class="Label" for="intrebare-7-a">
+								<span class="LabelText"><strong>A.</strong> amenda penala;</span>
+								<input class="Checkbox Hidden" id="intrebare-7-a" name="intrebare-7" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-7-b">
+								<span class="LabelText"><strong>B.</strong> amenda si dupa caz, atentionarea;</span>
+								<input class="Checkbox Hidden" id="intrebare-7-b" name="intrebare-7" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-7-c">
+								<span class="LabelText"><strong>C.</strong> amenda, puncte de penalizare, precum si suspendarea exercitarii dreptului de a conduce autovehicule.</span>
+								<input class="Checkbox Hidden" id="intrebare-7-c" name="intrebare-7" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-8">
+							<legend class="Legend">Întrebarea nr. 8</legend>
+							<p class="Intrebare">Cum sunt semnalizate benzile de circulatie reversibila, care va permit sa va continuati deplasarea?</p>
+							<label class="Label" for="intrebare-8-a">
+								<span class="LabelText"><strong>A.</strong> cu semnalul verde de forma unei sageti cu varful in jos;</span>
+								<input class="Checkbox Hidden" id="intrebare-8-a" name="intrebare-8" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-8-b">
+								<span class="LabelText"><strong>B.</strong> cu dispozitive de culoare galbena intermitenta;</span>
+								<input class="Checkbox Hidden" id="intrebare-8-b" name="intrebare-8" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-8-c">
+								<span class="LabelText"><strong>C.</strong> cu semnul rosu in cruce.</span>
+								<input class="Checkbox Hidden" id="intrebare-8-c" name="intrebare-8" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-9">
+							<legend class="Legend">Întrebarea nr. 9</legend>
+							<p class="Intrebare">Sunt exceptate de la obligatia de a purta centura de siguranta urmatoarele categorii de persoane:</p>
+							<label class="Label" for="intrebare-9-a">
+								<span class="LabelText"><strong>A.</strong> copiii sub 3 ani, dar transportati in dispozitive de retinere omologate;</span>
+								<input class="Checkbox Hidden" id="intrebare-9-a" name="intrebare-9" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-9-b">
+								<span class="LabelText"><strong>B.</strong> conducatorii autoturismelor, atunci cand executa manevra de mers inapoi sau cand stationeaza;</span>
+								<input class="Checkbox Hidden" id="intrebare-9-b" name="intrebare-9" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-9-c">
+								<span class="LabelText"><strong>C.</strong> conducatorul autoturismului pe timpul manevrei de intoarcere.</span>
+								<input class="Checkbox Hidden" id="intrebare-9-c" name="intrebare-9" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-10">
+							<legend class="Legend">Întrebarea nr. 10</legend>
+							<p class="Intrebare">Conduceti prin localitate, in spatele unui vehicul cu numar de inmatriculare din alt judet sau din strainatate. La ce va puteti astepta?</p>
+							<label class="Label" for="intrebare-10-a">
+								<span class="LabelText"><strong>A.</strong> vehiculul care circula in fata merge corect;</span>
+								<input class="Checkbox Hidden" id="intrebare-10-a" name="intrebare-10" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-10-b">
+								<span class="LabelText"><strong>B.</strong> conducatorul care circula in fata poate sa franeze si sa opreasca in mod neasteptat, din cauza necunoasterii traseului;</span>
+								<input class="Checkbox Hidden" id="intrebare-10-b" name="intrebare-10" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-10-c">
+								<span class="LabelText"><strong>C.</strong> inainte de a vira, conducatorul vehiculului respectiv va semnaliza din timp schimbarea directiei de mers.</span>
+								<input class="Checkbox Hidden" id="intrebare-10-c" name="intrebare-10" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-11">
+							<legend class="Legend">Întrebarea nr. 11</legend>
+							<p class="Intrebare">Permisul de conducere se retine:</p>
+							<label class="Label" for="intrebare-11-a">
+								<span class="LabelText"><strong>A.</strong> atunci cand autovehiculul nu este dotat cu oglinzi retrovizoare;</span>
+								<input class="Checkbox Hidden" id="intrebare-11-a" name="intrebare-11" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-11-b">
+								<span class="LabelText"><strong>B.</strong> in cazul incalcarii obligatiilor privind semnificatia luminilor rosii la trecerea la nivel cu calea ferata prevazuta cu bariere;</span>
+								<input class="Checkbox Hidden" id="intrebare-11-b" name="intrebare-11" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-11-c">
+								<span class="LabelText"><strong>C.</strong> in cazul repararii autovehiculului fara autorizatia politiei.</span>
+								<input class="Checkbox Hidden" id="intrebare-11-c" name="intrebare-11" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-12">
+							<legend class="Legend">Întrebarea nr. 12</legend>
+							<p class="Intrebare">Cand se retine certificatul de inmatriculare?</p>
+							<label class="Label" for="intrebare-12-a">
+								<span class="LabelText"><strong>A.</strong> cand sunt aplicate autocolante pe parbriz;</span>
+								<input class="Checkbox Hidden" id="intrebare-12-a" name="intrebare-12" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-12-b">
+								<span class="LabelText"><strong>B.</strong> cand vehiculul nu are efectuata inspectia tehnica;</span>
+								<input class="Checkbox Hidden" id="intrebare-12-b" name="intrebare-12" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-12-c">
+								<span class="LabelText"><strong>C.</strong> cand exista defectiuni la sistemul de climatizare.</span>
+								<input class="Checkbox Hidden" id="intrebare-12-c" name="intrebare-12" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-13">
+							<legend class="Legend">Întrebarea nr. 13</legend>
+							<p class="Intrebare">Ce obligatie avem daca intr-o intersectie intalniti indicatorul <q>Inainte sau la stanga</q> si semaforul se afla pe culoarea verde?</p>
+							<label class="Label" for="intrebare-13-a">
+								<span class="LabelText"><strong>A.</strong> circulati numai inainte;</span>
+								<input class="Checkbox Hidden" id="intrebare-13-a" name="intrebare-13" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-13-b">
+								<span class="LabelText"><strong>B.</strong> circulati inainte sau la stanga;</span>
+								<input class="Checkbox Hidden" id="intrebare-13-b" name="intrebare-13" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-13-c">
+								<span class="LabelText"><strong>C.</strong> circulati in alta directie, deoarece culoarea verde va permite acest lucru.</span>
+								<input class="Checkbox Hidden" id="intrebare-13-c" name="intrebare-13" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-14">
+							<legend class="Legend">Întrebarea nr. 14</legend>
+							<p class="Intrebare">Cand nu este permis unui autovehicul sa circule?</p>
+							<label class="Label" for="intrebare-14-a">
+								<span class="LabelText"><strong>A.</strong> cand unul din faruri nu functioneaza;</span>
+								<input class="Checkbox Hidden" id="intrebare-14-a" name="intrebare-14" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-14-b">
+								<span class="LabelText"><strong>B.</strong> cand parbrizul este fisurat;</span>
+								<input class="Checkbox Hidden" id="intrebare-14-b" name="intrebare-14" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-14-c">
+								<span class="LabelText"><strong>C.</strong> cand noxele depasesc limita legala admisa.</span>
+								<input class="Checkbox Hidden" id="intrebare-14-c" name="intrebare-14" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-15">
+							<legend class="Legend">Întrebarea nr. 15</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-15.jpg" width="400" height="300" alt="Poza pentru întrebarea 15" />
+							<p class="Intrebare">Conduceti autoturismul albastru. V-ati angajat corect in depasirea motocicletei?</p>
+							<label class="Label" for="intrebare-15-a">
+								<span class="LabelText"><strong>A.</strong> da, deoarece din sens opus nu circula nici un vehicul;</span>
+								<input class="Checkbox Hidden" id="intrebare-15-a" name="intrebare-15" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-15-b">
+								<span class="LabelText"><strong>B.</strong> da, deoarece motocicleta nu trece peste axul drumului;</span>
+								<input class="Checkbox Hidden" id="intrebare-15-b" name="intrebare-15" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-15-c">
+								<span class="LabelText"><strong>C.</strong> nu, deoarece motocicleta depaseste autocamionul.</span>
+								<input class="Checkbox Hidden" id="intrebare-15-c" name="intrebare-15" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-16">
+							<legend class="Legend">Întrebarea nr. 16</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-16.jpg" width="400" height="300" alt="Poza pentru întrebarea 16" />
+							<p class="Intrebare">Motociclistul din imagine depaseste corect cele doua autovehicule?</p>
+							<label class="Label" for="intrebare-16-a">
+								<span class="LabelText"><strong>A.</strong> nu, deoarece Regulamentul interzice aceasta manevra;</span>
+								<input class="Checkbox Hidden" id="intrebare-16-a" name="intrebare-16" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-16-b">
+								<span class="LabelText"><strong>B.</strong> nu, deoarece se afla la mai putin de 50 m de coltul intersectiei;</span>
+								<input class="Checkbox Hidden" id="intrebare-16-b" name="intrebare-16" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-16-c">
+								<span class="LabelText"><strong>C.</strong> da, deoarece indicatorul nu interzice acest lucru.</span>
+								<input class="Checkbox Hidden" id="intrebare-16-c" name="intrebare-16" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-17">
+							<legend class="Legend">Întrebarea nr. 17</legend>
+							<p class="Intrebare">Viteza maxima prevazuta de lege pentru circulatia in zonele rezidentiale este:</p>
+							<label class="Label" for="intrebare-17-a">
+								<span class="LabelText"><strong>A.</strong> 20 km/h;</span>
+								<input class="Checkbox Hidden" id="intrebare-17-a" name="intrebare-17" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-17-b">
+								<span class="LabelText"><strong>B.</strong> 10 km/h;</span>
+								<input class="Checkbox Hidden" id="intrebare-17-b" name="intrebare-17" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-17-c">
+								<span class="LabelText"><strong>C.</strong> 5 km/h.</span>
+								<input class="Checkbox Hidden" id="intrebare-17-c" name="intrebare-17" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-18">
+							<legend class="Legend">Întrebarea nr. 18</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-18.jpg" width="400" height="300" alt="Poza pentru întrebarea 18" />
+							<p class="Intrebare">Semnalul verde al semaforului permite:</p>
+							<label class="Label" for="intrebare-18-a">
+								<span class="LabelText"><strong>A.</strong> sa circulati pe directia inainte sau la stanga;</span>
+								<input class="Checkbox Hidden" id="intrebare-18-a" name="intrebare-18" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-18-b">
+								<span class="LabelText"><strong>B.</strong> sa circulati in orice directie;</span>
+								<input class="Checkbox Hidden" id="intrebare-18-b" name="intrebare-18" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-18-c">
+								<span class="LabelText"><strong>C.</strong> sa circulati pe directia inainte sau la dreapta.</span>
+								<input class="Checkbox Hidden" id="intrebare-18-c" name="intrebare-18" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-19">
+							<legend class="Legend">Întrebarea nr. 19</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-19.jpg" width="400" height="300" alt="Poza pentru întrebarea 19" />
+							<p class="Intrebare">Ce este interzis  pe sectorul de drum pe care este instalat acest indicator?</p>
+							<label class="Label" for="intrebare-19-a">
+								<span class="LabelText"><strong>A.</strong> stationarea;</span>
+								<input class="Checkbox Hidden" id="intrebare-19-a" name="intrebare-19" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-19-b">
+								<span class="LabelText"><strong>B.</strong> circulatia autovehiculelor cu gabarit depasit;</span>
+								<input class="Checkbox Hidden" id="intrebare-19-b" name="intrebare-19" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-19-c">
+								<span class="LabelText"><strong>C.</strong> oprirea.</span>
+								<input class="Checkbox Hidden" id="intrebare-19-c" name="intrebare-19" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-20">
+							<legend class="Legend">Întrebarea nr. 20</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-20.jpg" width="400" height="300" alt="Poza pentru întrebarea 20" />
+							<p class="Intrebare">In acest loc trebuie sa fiti deosebit de atent. De ce?</p>
+							<label class="Label" for="intrebare-20-a">
+								<span class="LabelText"><strong>A.</strong> din cauza pericolului marit de derapaj, datorat pietrei cubice umede;</span>
+								<input class="Checkbox Hidden" id="intrebare-20-a" name="intrebare-20" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-20-b">
+								<span class="LabelText"><strong>B.</strong> din cauza unui vehicul care ar putea aparea din dreapta;</span>
+								<input class="Checkbox Hidden" id="intrebare-20-b" name="intrebare-20" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-20-c">
+								<span class="LabelText"><strong>C.</strong> din cauza vizibilitatii reduse a traseului strazii</span>
+								<input class="Checkbox Hidden" id="intrebare-20-c" name="intrebare-20" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-21">
+							<legend class="Legend">Întrebarea nr. 21</legend>
+							<p class="Intrebare">Cum trebuie sa procedati atunci cand iesiti cu autovehiculul dintr-o curte sau dintr-un garaj pe un drum public?</p>
+							<label class="Label" for="intrebare-21-a">
+								<span class="LabelText"><strong>A.</strong> acordati prioritate pietonilor si vehiculelor aflate in mers;</span>
+								<input class="Checkbox Hidden" id="intrebare-21-a" name="intrebare-21" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-21-b">
+								<span class="LabelText"><strong>B.</strong> folositi avertizorul sonor ziua si pe cel luminos noaptea;</span>
+								<input class="Checkbox Hidden" id="intrebare-21-b" name="intrebare-21" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-21-c">
+								<span class="LabelText"><strong>C.</strong> solicitati sa fiti ghidat de o alta persoana.</span>
+								<input class="Checkbox Hidden" id="intrebare-21-c" name="intrebare-21" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-22">
+							<legend class="Legend">Întrebarea nr. 22</legend>
+							<p class="Intrebare">Ce trebuie sa aveti in vedere daca intentionati sa remorcati un autoturism cu servodirectie ramas in pana de motor?</p>
+							<label class="Label" for="intrebare-22-a">
+								<span class="LabelText"><strong>A.</strong> nu aveti voie sa-l remorcati in aceasta situatie;</span>
+								<input class="Checkbox Hidden" id="intrebare-22-a" name="intrebare-22" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-22-b">
+								<span class="LabelText"><strong>B.</strong> deoarece manevrarea volanului solicita un efort fizic mai mare, este necesar sa efectuati tractarea cu deosebita atentie;</span>
+								<input class="Checkbox Hidden" id="intrebare-22-b" name="intrebare-22" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-22-c">
+								<span class="LabelText"><strong>C.</strong> sa blocati directia.</span>
+								<input class="Checkbox Hidden" id="intrebare-22-c" name="intrebare-22" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-23">
+							<legend class="Legend">Întrebarea nr. 23</legend>
+							<p class="Intrebare">Se dispune retinerea permisului de conducere pentru:</p>
+							<label class="Label" for="intrebare-23-a">
+								<span class="LabelText"><strong>A.</strong> permisul de conducere prezinta modificari, stersaturi sau adaugiri;</span>
+								<input class="Checkbox Hidden" id="intrebare-23-a" name="intrebare-23" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-23-b">
+								<span class="LabelText"><strong>B.</strong> permisul de conducere este deteriorat;</span>
+								<input class="Checkbox Hidden" id="intrebare-23-b" name="intrebare-23" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-23-c">
+								<span class="LabelText"><strong>C.</strong> neacordarea prioritatii de trecere.</span>
+								<input class="Checkbox Hidden" id="intrebare-23-c" name="intrebare-23" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-24">
+							<legend class="Legend">Întrebarea nr. 24</legend>
+							<p class="Intrebare">Ce tip de coliziuni au cea mai mare forta de distrugere?</p>
+							<label class="Label" for="intrebare-24-a">
+								<span class="LabelText"><strong>A.</strong> coliziunile din spate;</span>
+								<input class="Checkbox Hidden" id="intrebare-24-a" name="intrebare-24" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-24-b">
+								<span class="LabelText"><strong>B.</strong> coliziunile frontale;</span>
+								<input class="Checkbox Hidden" id="intrebare-24-b" name="intrebare-24" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-24-c">
+								<span class="LabelText"><strong>C.</strong> coliziunile laterale.</span>
+								<input class="Checkbox Hidden" id="intrebare-24-c" name="intrebare-24" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-25">
+							<legend class="Legend">Întrebarea nr. 25</legend>
+							<p class="Intrebare">Ce autovehicule trebuie sa-si refaca inspectia tehnica inainte de termen?</p>
+							<label class="Label" for="intrebare-25-a">
+								<span class="LabelText"><strong>A.</strong> autovehiculele cu inscriptia <q>scoala</q>;</span>
+								<input class="Checkbox Hidden" id="intrebare-25-a" name="intrebare-25" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-25-b">
+								<span class="LabelText"><strong>B.</strong> autovehiculele cu sisteme de franare si de directie grav avariate;</span>
+								<input class="Checkbox Hidden" id="intrebare-25-b" name="intrebare-25" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-25-c">
+								<span class="LabelText"><strong>C.</strong> autovehiculele mai vechi de 10 ani.</span>
+								<input class="Checkbox Hidden" id="intrebare-25-c" name="intrebare-25" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset class="Fieldset Enunt" id="fieldset-26">
+							<legend class="Legend">Întrebarea nr. 26</legend>
+							<img class="IntrebarePoza" src="img/intrebarea-26.jpg" width="400" height="300" alt="Poza pentru întrebarea 26" />
+							<p class="Intrebare">Care din vehicule este parcat regulamentar?</p>
+							<label class="Label" for="intrebare-26-a">
+								<span class="LabelText"><strong>A.</strong> autobuzul;</span>
+								<input class="Checkbox Hidden" id="intrebare-26-a" name="intrebare-26" type="checkbox" value="a" />
+							</label>
+							<label class="Label" for="intrebare-26-b">
+								<span class="LabelText"><strong>B.</strong> autobuzul si autocamionul verde;</span>
+								<input class="Checkbox Hidden" id="intrebare-26-b" name="intrebare-26" type="checkbox" value="b" />
+							</label>
+							<label class="Label" for="intrebare-26-c">
+								<span class="LabelText"><strong>C.</strong> toate cele 3 autovehicule.</span>
+								<input class="Checkbox Hidden" id="intrebare-26-c" name="intrebare-26" type="checkbox" value="c" />
+							</label>
+						</fieldset>
+						<fieldset>
+							<button class="Button Back Hidden" type="button" title="Mergi la întrebarea precedentă">&laquo; Înapoi</button> <!-- inițial ascuns, e afișat când te poți întoarce la o întrebare precedentă -->
+							<button class="Button Next" type="button" title="Mergi la întrebarea următoare">Următoarea întrebare &raquo;</button> <!-- afișat când poți merge la întrebarea următoare -->
+						</fieldset>
+						<fieldset class="Fieldset FinalContainer">
+							<legend class="Legend">Ai terminat?</legend>
+							<button class="Button CTA" id="auto-cta" type="submit" title="Verifică-ți răspunsurile la chestionar acum!">Trimite chestionarul &raquo;</button> <!-- afișat numai după ultima întrebare -->
+						</fieldset>
+					</form>
+				</section>
+				<section class="Proiect" id="spanzuratoarea">
+					<h2>Spânzurătoarea *</h2>
+					<div class="SpanzuCanvas">
+						<img id="spanzu" class="Spanzu" src="img/spanzu-0.png" width="256" height="256" alt="Spanzuratoarea" /> <!-- schimb SRC-ul pozei la fiecare greșeală -->
+					</div>
+					<form id="spanzuForm" class="Form" action="index.html" method="post">
+						<fieldset class="Fieldset Active">
+							<legend class="Legend">Cuvântul căutat:</legend>
+							<h3>Specializarea facultății în care suntem studenți.</h3>
+							<ol class="SpanzuLista">
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-0" name="litera-0" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 0" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none"> <!-- fiecare SVG va fi animat când se găsește litera corectă -->
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-1" name="litera-1" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 1" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-2" name="litera-2" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 2" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-3" name="litera-3" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 3" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-4" name="litera-4" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 4" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-5" name="litera-5" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 5" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-6" name="litera-6" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 6" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-7" name="litera-7" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 7" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-8" name="litera-8" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 8" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-9" name="litera-9" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 9" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+								<li class="SpanzuItem">
+									<input class="SpanzuInput" id="litera-10" name="litera-10" type="text" size="1" maxlength="1" accept="a-z" alt="Litera 10" disabled="disabled" />
+									<svg class="graphic graphic--nao" width="300%" height="400%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+										<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+									</svg>
+								</li>
+							</ol>
+							<ul class="SpanzuLitere"></ul>
+							<p>* Spânzurătoarea e singurul proiect care nu merge pe dispozitive cu touchscreen, fiindcă are nevoie de un plugin de tastatură digitală.</p>
+						</fieldset>
+					</form>
+				</section>
+				<section class="Proiect" id="animatie">
+					<h2>Animație</h2>
+					<p>Click oriunde pentru a muta cercurile la acele coordonate!</p>
+					<canvas class="Canvas" id="testCanvas" width="960" height="400"></canvas>
+				</section>
+			</main>
+			<p class="Copy">Autor: <a href="http://viorel.tel" tabindex="0">Viorel Mocanu</a>.</p>
+		</div>
+		<script type="text/javascript">
+			var protocol = '';
+			var p = window.location.href.split('/');
+			if ( p[0] != 'http:' && p[0] != 'https:' ) protocol = 'http:';
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script',protocol+'//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-266669-11', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>
